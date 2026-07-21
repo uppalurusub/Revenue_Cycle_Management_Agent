@@ -1,0 +1,134 @@
+2026-07-14 12:22:09.055 | INFO     | __main__:<module>:157 - Revenue Cycle Router Registered
+2026-07-14 12:22:51.601 | INFO     | main:<module>:157 - Revenue Cycle Router Registered
+2026-07-14 12:22:58.240 | INFO     | main:<module>:157 - Revenue Cycle Router Registered
+2026-07-14 12:23:10.160 | INFO     | main:log_requests:61 - Incoming Request | GET /docs
+2026-07-14 12:23:10.162 | INFO     | main:log_requests:74 - Completed Request | Status=200 | Duration=0.002s
+2026-07-14 12:23:10.483 | INFO     | main:log_requests:61 - Incoming Request | GET /openapi.json
+2026-07-14 12:23:10.563 | INFO     | main:log_requests:74 - Completed Request | Status=200 | Duration=0.081s
+2026-07-14 12:23:27.722 | INFO     | main:log_requests:61 - Incoming Request | POST /revenue-cycle/process-claim
+2026-07-14 12:23:27.725 | INFO     | routers.revenue_cycle_router:process_claim:28 - Received claim request | Claim ID=CLM20260001 | Patient ID=PAT10001
+2026-07-14 12:23:27.725 | INFO     | services.revenue_cycle_service:process_claim:39 - Starting claim processing | Claim ID=CLM20260001 | Patient ID=PAT10001
+2026-07-14 12:23:30.156 | INFO     | implementation.revenue_cycle_impl:process_claim:27 - Processing Claim | Claim ID=CLM20260001
+2026-07-14 12:23:30.156 | INFO     | implementation.revenue_cycle_impl:process_claim:90 - Running Claims Agent
+2026-07-14 12:25:00.733 | INFO     | implementation.revenue_cycle_impl:process_claim:96 - Running Billing Agent
+2026-07-14 12:25:22.674 | INFO     | implementation.revenue_cycle_impl:process_claim:102 - Running Validation Agent
+2026-07-14 12:25:48.120 | SUCCESS  | implementation.revenue_cycle_impl:process_claim:117 - Claim Processed Successfully | Claim ID=CLM20260001
+2026-07-14 12:25:50.279 | SUCCESS  | services.revenue_cycle_service:process_claim:75 - Claim processing completed | Claim ID=CLM20260001
+2026-07-14 12:25:50.280 | SUCCESS  | routers.revenue_cycle_router:process_claim:38 - Claim processed successfully | Claim ID=CLM20260001
+2026-07-14 12:25:50.281 | INFO     | main:log_requests:74 - Completed Request | Status=200 | Duration=142.559s
+2026-07-14 12:31:26.725 | INFO     | main:log_requests:61 - Incoming Request | GET /revenue-cycle/health
+2026-07-14 12:31:26.729 | INFO     | routers.revenue_cycle_router:health_check:67 - Revenue Cycle Management Agent Health Check
+2026-07-14 12:31:26.730 | INFO     | main:log_requests:74 - Completed Request | Status=200 | Duration=0.005s
+2026-07-14 12:31:37.431 | INFO     | main:log_requests:61 - Incoming Request | GET /revenue-cycle/health
+2026-07-14 12:31:37.434 | INFO     | routers.revenue_cycle_router:health_check:67 - Revenue Cycle Management Agent Health Check
+2026-07-14 12:31:37.435 | INFO     | main:log_requests:74 - Completed Request | Status=200 | Duration=0.004s
+2026-07-14 12:31:37.479 | INFO     | main:log_requests:61 - Incoming Request | POST /revenue-cycle/process-claim
+2026-07-14 12:31:37.479 | INFO     | routers.revenue_cycle_router:process_claim:28 - Received claim request | Claim ID=CLM20260001 | Patient ID=PAT10001
+2026-07-14 12:31:37.481 | INFO     | services.revenue_cycle_service:process_claim:39 - Starting claim processing | Claim ID=CLM20260001 | Patient ID=PAT10001
+2026-07-14 12:31:39.597 | INFO     | implementation.revenue_cycle_impl:process_claim:27 - Processing Claim | Claim ID=CLM20260001
+2026-07-14 12:31:39.597 | INFO     | implementation.revenue_cycle_impl:process_claim:90 - Running Claims Agent
+2026-07-14 12:32:14.995 | INFO     | implementation.revenue_cycle_impl:process_claim:96 - Running Billing Agent
+2026-07-14 12:32:18.363 | INFO     | implementation.revenue_cycle_impl:process_claim:102 - Running Validation Agent
+2026-07-14 12:32:37.681 | SUCCESS  | implementation.revenue_cycle_impl:process_claim:117 - Claim Processed Successfully | Claim ID=CLM20260001
+2026-07-14 12:32:39.839 | SUCCESS  | services.revenue_cycle_service:process_claim:75 - Claim processing completed | Claim ID=CLM20260001
+2026-07-14 12:32:39.839 | SUCCESS  | routers.revenue_cycle_router:process_claim:38 - Claim processed successfully | Claim ID=CLM20260001
+2026-07-14 12:32:39.840 | INFO     | main:log_requests:74 - Completed Request | Status=200 | Duration=62.362s
+2026-07-14 12:36:25.541 | INFO     | main:log_requests:61 - Incoming Request | GET /revenue-cycle/health
+2026-07-14 12:36:25.541 | INFO     | routers.revenue_cycle_router:health_check:67 - Revenue Cycle Management Agent Health Check
+2026-07-14 12:36:25.541 | INFO     | main:log_requests:74 - Completed Request | Status=200 | Duration=0.0s
+2026-07-14 12:36:32.372 | INFO     | main:log_requests:61 - Incoming Request | GET /revenue-cycle/health
+2026-07-14 12:36:32.373 | INFO     | routers.revenue_cycle_router:health_check:67 - Revenue Cycle Management Agent Health Check
+2026-07-14 12:36:32.375 | INFO     | main:log_requests:74 - Completed Request | Status=200 | Duration=0.003s
+2026-07-14 12:36:32.426 | INFO     | main:log_requests:61 - Incoming Request | POST /revenue-cycle/process-claim
+2026-07-14 12:36:32.429 | INFO     | routers.revenue_cycle_router:process_claim:28 - Received claim request | Claim ID=CLM20260001 | Patient ID=PAT10001
+2026-07-14 12:36:32.429 | INFO     | services.revenue_cycle_service:process_claim:39 - Starting claim processing | Claim ID=CLM20260001 | Patient ID=PAT10001
+2026-07-14 12:36:34.559 | INFO     | implementation.revenue_cycle_impl:process_claim:27 - Processing Claim | Claim ID=CLM20260001
+2026-07-14 12:36:34.559 | INFO     | implementation.revenue_cycle_impl:process_claim:90 - Running Claims Agent
+2026-07-14 12:36:48.376 | INFO     | implementation.revenue_cycle_impl:process_claim:96 - Running Billing Agent
+2026-07-14 12:37:17.424 | INFO     | implementation.revenue_cycle_impl:process_claim:102 - Running Validation Agent
+2026-07-14 12:37:37.439 | SUCCESS  | implementation.revenue_cycle_impl:process_claim:117 - Claim Processed Successfully | Claim ID=CLM20260001
+2026-07-14 12:37:39.658 | SUCCESS  | services.revenue_cycle_service:process_claim:75 - Claim processing completed | Claim ID=CLM20260001
+2026-07-14 12:37:39.658 | SUCCESS  | routers.revenue_cycle_router:process_claim:38 - Claim processed successfully | Claim ID=CLM20260001
+2026-07-14 12:37:39.658 | INFO     | main:log_requests:74 - Completed Request | Status=200 | Duration=67.232s
+2026-07-14 12:39:40.740 | INFO     | main:log_requests:61 - Incoming Request | GET /revenue-cycle/health
+2026-07-14 12:39:40.741 | INFO     | routers.revenue_cycle_router:health_check:67 - Revenue Cycle Management Agent Health Check
+2026-07-14 12:39:40.742 | INFO     | main:log_requests:74 - Completed Request | Status=200 | Duration=0.002s
+2026-07-14 12:39:45.630 | INFO     | main:log_requests:61 - Incoming Request | GET /revenue-cycle/health
+2026-07-14 12:39:45.630 | INFO     | routers.revenue_cycle_router:health_check:67 - Revenue Cycle Management Agent Health Check
+2026-07-14 12:39:45.632 | INFO     | main:log_requests:74 - Completed Request | Status=200 | Duration=0.002s
+2026-07-14 12:39:45.691 | INFO     | main:log_requests:61 - Incoming Request | POST /revenue-cycle/process-claim
+2026-07-14 12:39:45.692 | INFO     | routers.revenue_cycle_router:process_claim:28 - Received claim request | Claim ID=CLM20260001 | Patient ID=PAT10001
+2026-07-14 12:39:45.693 | INFO     | services.revenue_cycle_service:process_claim:39 - Starting claim processing | Claim ID=CLM20260001 | Patient ID=PAT10001
+2026-07-14 12:39:47.865 | INFO     | implementation.revenue_cycle_impl:process_claim:27 - Processing Claim | Claim ID=CLM20260001
+2026-07-14 12:39:47.866 | INFO     | implementation.revenue_cycle_impl:process_claim:90 - Running Claims Agent
+2026-07-14 12:39:59.611 | INFO     | implementation.revenue_cycle_impl:process_claim:96 - Running Billing Agent
+2026-07-14 12:40:04.756 | INFO     | implementation.revenue_cycle_impl:process_claim:102 - Running Validation Agent
+2026-07-14 12:40:24.868 | SUCCESS  | implementation.revenue_cycle_impl:process_claim:117 - Claim Processed Successfully | Claim ID=CLM20260001
+2026-07-14 12:40:27.082 | SUCCESS  | services.revenue_cycle_service:process_claim:75 - Claim processing completed | Claim ID=CLM20260001
+2026-07-14 12:40:27.084 | SUCCESS  | routers.revenue_cycle_router:process_claim:38 - Claim processed successfully | Claim ID=CLM20260001
+2026-07-14 12:40:27.084 | INFO     | main:log_requests:74 - Completed Request | Status=200 | Duration=41.393s
+2026-07-14 12:43:23.539 | INFO     | main:log_requests:61 - Incoming Request | GET /revenue-cycle/health
+2026-07-14 12:43:23.540 | INFO     | routers.revenue_cycle_router:health_check:67 - Revenue Cycle Management Agent Health Check
+2026-07-14 12:43:23.541 | INFO     | main:log_requests:74 - Completed Request | Status=200 | Duration=0.002s
+2026-07-14 12:43:29.869 | INFO     | main:log_requests:61 - Incoming Request | GET /revenue-cycle/health
+2026-07-14 12:43:29.870 | INFO     | routers.revenue_cycle_router:health_check:67 - Revenue Cycle Management Agent Health Check
+2026-07-14 12:43:29.871 | INFO     | main:log_requests:74 - Completed Request | Status=200 | Duration=0.002s
+2026-07-14 12:43:29.922 | INFO     | main:log_requests:61 - Incoming Request | POST /revenue-cycle/process-claim
+2026-07-14 12:43:29.922 | INFO     | routers.revenue_cycle_router:process_claim:28 - Received claim request | Claim ID=CLM20260001 | Patient ID=PAT10001
+2026-07-14 12:43:29.922 | INFO     | services.revenue_cycle_service:process_claim:39 - Starting claim processing | Claim ID=CLM20260001 | Patient ID=PAT10001
+2026-07-14 12:43:32.424 | INFO     | implementation.revenue_cycle_impl:process_claim:27 - Processing Claim | Claim ID=CLM20260001
+2026-07-14 12:43:32.424 | INFO     | implementation.revenue_cycle_impl:process_claim:90 - Running Claims Agent
+2026-07-14 12:43:55.224 | INFO     | implementation.revenue_cycle_impl:process_claim:96 - Running Billing Agent
+2026-07-14 12:44:09.120 | INFO     | implementation.revenue_cycle_impl:process_claim:102 - Running Validation Agent
+2026-07-14 12:44:27.008 | SUCCESS  | implementation.revenue_cycle_impl:process_claim:117 - Claim Processed Successfully | Claim ID=CLM20260001
+2026-07-14 12:44:29.152 | SUCCESS  | services.revenue_cycle_service:process_claim:75 - Claim processing completed | Claim ID=CLM20260001
+2026-07-14 12:44:29.152 | SUCCESS  | routers.revenue_cycle_router:process_claim:38 - Claim processed successfully | Claim ID=CLM20260001
+2026-07-14 12:44:29.152 | INFO     | main:log_requests:74 - Completed Request | Status=200 | Duration=59.23s
+2026-07-14 12:53:01.229 | INFO     | main:log_requests:61 - Incoming Request | OPTIONS /revenue-cycle/process-claim
+2026-07-14 12:53:01.234 | INFO     | main:log_requests:74 - Completed Request | Status=405 | Duration=0.006s
+2026-07-14 12:56:39.724 | INFO     | main:<module>:171 - Revenue Cycle Router Registered
+2026-07-14 12:57:06.460 | INFO     | main:log_requests:75 - Incoming Request | OPTIONS /revenue-cycle/process-claim
+2026-07-14 12:57:06.462 | INFO     | main:log_requests:88 - Completed Request | Status=200 | Duration=0.002s
+2026-07-14 12:57:06.464 | INFO     | main:log_requests:75 - Incoming Request | POST /revenue-cycle/process-claim
+2026-07-14 12:57:06.474 | INFO     | routers.revenue_cycle_router:process_claim:28 - Received claim request | Claim ID=CLM20260001 | Patient ID=PAT10001
+2026-07-14 12:57:06.475 | INFO     | services.revenue_cycle_service:process_claim:39 - Starting claim processing | Claim ID=CLM20260001 | Patient ID=PAT10001
+2026-07-14 12:57:08.882 | INFO     | implementation.revenue_cycle_impl:process_claim:27 - Processing Claim | Claim ID=CLM20260001
+2026-07-14 12:57:08.882 | INFO     | implementation.revenue_cycle_impl:process_claim:90 - Running Claims Agent
+2026-07-14 12:57:24.274 | INFO     | implementation.revenue_cycle_impl:process_claim:96 - Running Billing Agent
+2026-07-14 12:57:54.508 | INFO     | implementation.revenue_cycle_impl:process_claim:102 - Running Validation Agent
+2026-07-14 12:58:18.302 | SUCCESS  | implementation.revenue_cycle_impl:process_claim:117 - Claim Processed Successfully | Claim ID=CLM20260001
+2026-07-14 12:58:20.527 | SUCCESS  | services.revenue_cycle_service:process_claim:75 - Claim processing completed | Claim ID=CLM20260001
+2026-07-14 12:58:20.527 | SUCCESS  | routers.revenue_cycle_router:process_claim:38 - Claim processed successfully | Claim ID=CLM20260001
+2026-07-14 12:58:20.527 | INFO     | main:log_requests:88 - Completed Request | Status=200 | Duration=74.062s
+2026-07-21 18:53:18.299 | INFO     | main:<module>:171 - Revenue Cycle Router Registered
+2026-07-21 18:53:24.289 | INFO     | main:<module>:171 - Revenue Cycle Router Registered
+2026-07-21 18:54:14.539 | INFO     | main:log_requests:75 - Incoming Request | GET /revenue-cycle/health
+2026-07-21 18:54:14.571 | INFO     | routers.revenue_cycle_router:health_check:67 - Revenue Cycle Management Agent Health Check
+2026-07-21 18:54:14.573 | INFO     | main:log_requests:88 - Completed Request | Status=200 | Duration=0.033s
+2026-07-21 18:54:25.320 | INFO     | main:log_requests:75 - Incoming Request | GET /revenue-cycle/health
+2026-07-21 18:54:25.327 | INFO     | routers.revenue_cycle_router:health_check:67 - Revenue Cycle Management Agent Health Check
+2026-07-21 18:54:25.329 | INFO     | main:log_requests:88 - Completed Request | Status=200 | Duration=0.008s
+2026-07-21 18:54:25.378 | INFO     | main:log_requests:75 - Incoming Request | POST /revenue-cycle/process-claim
+2026-07-21 18:54:25.378 | INFO     | routers.revenue_cycle_router:process_claim:28 - Received claim request | Claim ID=CLM20260001 | Patient ID=PAT10001
+2026-07-21 18:54:25.378 | INFO     | services.revenue_cycle_service:process_claim:39 - Starting claim processing | Claim ID=CLM20260001 | Patient ID=PAT10001
+2026-07-21 18:54:27.965 | INFO     | implementation.revenue_cycle_impl:process_claim:27 - Processing Claim | Claim ID=CLM20260001
+2026-07-21 18:54:27.966 | INFO     | implementation.revenue_cycle_impl:process_claim:90 - Running Claims Agent
+2026-07-21 18:55:06.121 | INFO     | implementation.revenue_cycle_impl:process_claim:96 - Running Billing Agent
+2026-07-21 18:55:28.485 | INFO     | implementation.revenue_cycle_impl:process_claim:102 - Running Validation Agent
+2026-07-21 18:55:52.448 | SUCCESS  | implementation.revenue_cycle_impl:process_claim:117 - Claim Processed Successfully | Claim ID=CLM20260001
+2026-07-21 18:55:54.744 | SUCCESS  | services.revenue_cycle_service:process_claim:75 - Claim processing completed | Claim ID=CLM20260001
+2026-07-21 18:55:54.744 | SUCCESS  | routers.revenue_cycle_router:process_claim:38 - Claim processed successfully | Claim ID=CLM20260001
+2026-07-21 18:55:54.744 | INFO     | main:log_requests:88 - Completed Request | Status=200 | Duration=89.365s
+2026-07-21 18:56:03.539 | INFO     | main:log_requests:75 - Incoming Request | OPTIONS /revenue-cycle/process-claim
+2026-07-21 18:56:03.539 | INFO     | main:log_requests:88 - Completed Request | Status=200 | Duration=0.0s
+2026-07-21 18:56:03.543 | INFO     | main:log_requests:75 - Incoming Request | POST /revenue-cycle/process-claim
+2026-07-21 18:56:03.546 | INFO     | routers.revenue_cycle_router:process_claim:28 - Received claim request | Claim ID=CLM20260001 | Patient ID=PAT10001
+2026-07-21 18:56:03.547 | INFO     | services.revenue_cycle_service:process_claim:39 - Starting claim processing | Claim ID=CLM20260001 | Patient ID=PAT10001
+2026-07-21 18:56:05.707 | INFO     | implementation.revenue_cycle_impl:process_claim:27 - Processing Claim | Claim ID=CLM20260001
+2026-07-21 18:56:05.707 | INFO     | implementation.revenue_cycle_impl:process_claim:90 - Running Claims Agent
+2026-07-21 18:56:26.754 | INFO     | implementation.revenue_cycle_impl:process_claim:96 - Running Billing Agent
+2026-07-21 18:56:29.096 | INFO     | implementation.revenue_cycle_impl:process_claim:102 - Running Validation Agent
+2026-07-21 18:57:43.655 | SUCCESS  | implementation.revenue_cycle_impl:process_claim:117 - Claim Processed Successfully | Claim ID=CLM20260001
+2026-07-21 18:57:45.798 | SUCCESS  | services.revenue_cycle_service:process_claim:75 - Claim processing completed | Claim ID=CLM20260001
+2026-07-21 18:57:45.799 | SUCCESS  | routers.revenue_cycle_router:process_claim:38 - Claim processed successfully | Claim ID=CLM20260001
+2026-07-21 18:57:45.799 | INFO     | main:log_requests:88 - Completed Request | Status=200 | Duration=102.256s

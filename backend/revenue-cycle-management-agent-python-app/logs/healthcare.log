@@ -1,0 +1,54 @@
+2026-07-14 12:22:05 | INFO | config.llm_config:<module>:18 | Using OpenRouter Model: openai/gpt-oss-120b
+2026-07-14 12:22:09 | INFO | services.revenue_cycle_service:__init__:23 | Initializing RevenueCycleService
+2026-07-14 12:22:09 | INFO | implementation.revenue_cycle_impl:__init__:13 | Initializing RevenueCycleImplementation
+2026-07-14 12:22:09 | INFO | agents.claims_agent:get_claims_agent:17 | Initializing Claims Agent
+2026-07-14 12:22:09 | SUCCESS | agents.claims_agent:get_claims_agent:49 | Claims Agent Initialized Successfully
+2026-07-14 12:22:09 | INFO | agents.billing_agent:get_billing_agent:17 | Initializing Billing Agent
+2026-07-14 12:22:09 | SUCCESS | agents.billing_agent:get_billing_agent:49 | Billing Agent Initialized Successfully
+2026-07-14 12:22:09 | INFO | agents.validation_agent:get_validation_agent:17 | Initializing Validation Agent
+2026-07-14 12:22:09 | SUCCESS | agents.validation_agent:get_validation_agent:51 | Validation Agent Initialized Successfully
+2026-07-14 12:22:47 | INFO | config.llm_config:<module>:18 | Using OpenRouter Model: openai/gpt-oss-120b
+2026-07-14 12:22:51 | INFO | services.revenue_cycle_service:__init__:23 | Initializing RevenueCycleService
+2026-07-14 12:22:51 | INFO | implementation.revenue_cycle_impl:__init__:13 | Initializing RevenueCycleImplementation
+2026-07-14 12:22:51 | INFO | agents.claims_agent:get_claims_agent:17 | Initializing Claims Agent
+2026-07-14 12:22:51 | SUCCESS | agents.claims_agent:get_claims_agent:49 | Claims Agent Initialized Successfully
+2026-07-14 12:22:51 | INFO | agents.billing_agent:get_billing_agent:17 | Initializing Billing Agent
+2026-07-14 12:22:51 | SUCCESS | agents.billing_agent:get_billing_agent:49 | Billing Agent Initialized Successfully
+2026-07-14 12:22:51 | INFO | agents.validation_agent:get_validation_agent:17 | Initializing Validation Agent
+2026-07-14 12:22:51 | SUCCESS | agents.validation_agent:get_validation_agent:51 | Validation Agent Initialized Successfully
+2026-07-14 12:22:53 | INFO | config.llm_config:<module>:18 | Using OpenRouter Model: openai/gpt-oss-120b
+2026-07-14 12:22:58 | INFO | services.revenue_cycle_service:__init__:23 | Initializing RevenueCycleService
+2026-07-14 12:22:58 | INFO | implementation.revenue_cycle_impl:__init__:13 | Initializing RevenueCycleImplementation
+2026-07-14 12:22:58 | INFO | agents.claims_agent:get_claims_agent:17 | Initializing Claims Agent
+2026-07-14 12:22:58 | SUCCESS | agents.claims_agent:get_claims_agent:49 | Claims Agent Initialized Successfully
+2026-07-14 12:22:58 | INFO | agents.billing_agent:get_billing_agent:17 | Initializing Billing Agent
+2026-07-14 12:22:58 | SUCCESS | agents.billing_agent:get_billing_agent:49 | Billing Agent Initialized Successfully
+2026-07-14 12:22:58 | INFO | agents.validation_agent:get_validation_agent:17 | Initializing Validation Agent
+2026-07-14 12:22:58 | SUCCESS | agents.validation_agent:get_validation_agent:51 | Validation Agent Initialized Successfully
+2026-07-14 12:56:35 | INFO | config.llm_config:<module>:18 | Using OpenRouter Model: openai/gpt-oss-120b
+2026-07-14 12:56:39 | INFO | services.revenue_cycle_service:__init__:23 | Initializing RevenueCycleService
+2026-07-14 12:56:39 | INFO | implementation.revenue_cycle_impl:__init__:13 | Initializing RevenueCycleImplementation
+2026-07-14 12:56:39 | INFO | agents.claims_agent:get_claims_agent:17 | Initializing Claims Agent
+2026-07-14 12:56:39 | SUCCESS | agents.claims_agent:get_claims_agent:49 | Claims Agent Initialized Successfully
+2026-07-14 12:56:39 | INFO | agents.billing_agent:get_billing_agent:17 | Initializing Billing Agent
+2026-07-14 12:56:39 | SUCCESS | agents.billing_agent:get_billing_agent:49 | Billing Agent Initialized Successfully
+2026-07-14 12:56:39 | INFO | agents.validation_agent:get_validation_agent:17 | Initializing Validation Agent
+2026-07-14 12:56:39 | SUCCESS | agents.validation_agent:get_validation_agent:51 | Validation Agent Initialized Successfully
+2026-07-21 18:53:14 | INFO | config.llm_config:<module>:18 | Using OpenRouter Model: openai/gpt-oss-120b
+2026-07-21 18:53:18 | INFO | services.revenue_cycle_service:__init__:23 | Initializing RevenueCycleService
+2026-07-21 18:53:18 | INFO | implementation.revenue_cycle_impl:__init__:13 | Initializing RevenueCycleImplementation
+2026-07-21 18:53:18 | INFO | agents.claims_agent:get_claims_agent:17 | Initializing Claims Agent
+2026-07-21 18:53:18 | SUCCESS | agents.claims_agent:get_claims_agent:49 | Claims Agent Initialized Successfully
+2026-07-21 18:53:18 | INFO | agents.billing_agent:get_billing_agent:17 | Initializing Billing Agent
+2026-07-21 18:53:18 | SUCCESS | agents.billing_agent:get_billing_agent:49 | Billing Agent Initialized Successfully
+2026-07-21 18:53:18 | INFO | agents.validation_agent:get_validation_agent:17 | Initializing Validation Agent
+2026-07-21 18:53:18 | SUCCESS | agents.validation_agent:get_validation_agent:51 | Validation Agent Initialized Successfully
+2026-07-21 18:53:20 | INFO | config.llm_config:<module>:18 | Using OpenRouter Model: openai/gpt-oss-120b
+2026-07-21 18:53:24 | INFO | services.revenue_cycle_service:__init__:23 | Initializing RevenueCycleService
+2026-07-21 18:53:24 | INFO | implementation.revenue_cycle_impl:__init__:13 | Initializing RevenueCycleImplementation
+2026-07-21 18:53:24 | INFO | agents.claims_agent:get_claims_agent:17 | Initializing Claims Agent
+2026-07-21 18:53:24 | SUCCESS | agents.claims_agent:get_claims_agent:49 | Claims Agent Initialized Successfully
+2026-07-21 18:53:24 | INFO | agents.billing_agent:get_billing_agent:17 | Initializing Billing Agent
+2026-07-21 18:53:24 | SUCCESS | agents.billing_agent:get_billing_agent:49 | Billing Agent Initialized Successfully
+2026-07-21 18:53:24 | INFO | agents.validation_agent:get_validation_agent:17 | Initializing Validation Agent
+2026-07-21 18:53:24 | SUCCESS | agents.validation_agent:get_validation_agent:51 | Validation Agent Initialized Successfully

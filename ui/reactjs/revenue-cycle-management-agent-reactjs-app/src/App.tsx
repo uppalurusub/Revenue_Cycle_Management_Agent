@@ -1,0 +1,1 @@
+import RevenueCyclePage from "./pages/RevenueCyclePage"; export default function App(){return <RevenueCyclePage/>;}
