@@ -4,6 +4,7 @@ import ClaimForm from "../components/claim/ClaimForm";
 import ResponseView from "../components/response/ResponseView";
 import type { ClaimRequest, RevenueCycleResponse } from "../models/claim";
 
+
 const initialClaim: ClaimRequest = {
   "claim_id": "CLM20260001",
   "patient_id": "PAT10001",
