@@ -1,353 +1,241 @@
 # Revenue Cycle Management Agent
 
-> An AI-powered Healthcare Revenue Cycle Management (RCM) system built using **FastAPI**, **Microsoft AutoGen 0.7.5**, **React TypeScript**, and **Streamlit**. The application automates healthcare insurance claim processing through a collaborative multi-agent workflow consisting of Claims Processing, Claim Validation, and Billing Review agents.
+## Overview
 
----
+The **Revenue Cycle Management (RCM) Agent** is an AI-powered healthcare automation solution built using **AutoGen 0.7.5**, **FastAPI**, and **Python**. It streamlines healthcare insurance claim processing by leveraging multiple specialized AI agents that collaborate to analyze, validate, and review medical claims before submission.
 
-# Table of Contents
+The system automates major Revenue Cycle Management (RCM) activities including:
 
-- Overview
-- Features
-- Solution Architecture
-- Technology Stack
-- Project Structure
-- Backend Application
-- React Frontend
-- Streamlit Frontend
-- Installation
-- Running the Applications
-- REST API
-- Sample Request
-- Sample Response
-- Multi-Agent Workflow
-- Logging
-- Future Enhancements
-- License
+* Insurance claim analysis
+* Medical billing review
+* Claim validation
+* Denial risk identification
+* Revenue leakage detection
+* Reimbursement estimation
+* Compliance verification
 
----
+The project follows a clean modular architecture using:
 
-# Overview
-
-Revenue Cycle Management (RCM) is a critical healthcare process responsible for managing insurance claims, billing, reimbursement, and payment workflows.
-
-This project demonstrates how AI Agents can automate various RCM activities using AutoGen, reducing manual effort while improving claim accuracy and processing efficiency.
-
-The system orchestrates multiple specialized AI agents that collaboratively:
-
-- Validate patient and claim information
-- Detect billing inconsistencies
-- Review insurance claims
-- Generate billing recommendations
-- Produce structured summaries for healthcare administrators
+* FastAPI REST APIs
+* Router → Service → Implementation pattern
+* AutoGen Multi-Agent workflow
+* Loguru logging
+* MLflow integration
+* Pydantic request/response validation
 
 ---
 
 # Features
 
-## AI Multi-Agent Workflow
-
-- Claims Processing Agent
-- Claim Validation Agent
-- Billing Review Agent
-- AutoGen Agent Collaboration
-- LLM-powered decision making
-- Automated claim summarization
-
----
-
-## Backend
-
-- FastAPI REST APIs
-- Pydantic validation
-- Layered architecture
-- Structured logging
-- Global exception handling
-- Health endpoints
-- CORS support
-- Async API implementation
+* Multi-Agent Healthcare Workflow
+* AutoGen 0.7.5 Implementation
+* Insurance Claim Processing
+* Billing Accuracy Review
+* Medical Claim Validation
+* Revenue Leakage Detection
+* Estimated Reimbursement Calculation
+* Denial Risk Analysis
+* Compliance Verification
+* FastAPI REST API
+* Modular Architecture
+* Structured Logging using Loguru
+* MLflow Support
+* Pydantic Models
+* Health Check APIs
 
 ---
 
-## React Frontend
-
-- React 19
-- TypeScript
-- Vite
-- Axios API integration
-- Markdown rendering
-- Clean claim submission UI
-- AI response visualization
-
----
-
-## Streamlit Dashboard
-
-- Interactive claim form
-- AI response viewer
-- Summary cards
-- JSON response visualization
-- Rapid healthcare demonstrations
-
----
-
-# Solution Architecture
+# Project Architecture
 
 ```
-                +---------------------+
-                | React Frontend      |
-                +----------+----------+
-                           |
-                           |
-                +----------v----------+
-                | FastAPI Backend     |
-                +----------+----------+
-                           |
-              Revenue Cycle Service
-                           |
-        -----------------------------------
-        |                |               |
-        |                |               |
-+-------v------+ +--------v------+ +------v------+
-| Claims Agent | | Validation    | | Billing     |
-|              | | Agent         | | Agent       |
-+--------------+ +---------------+ +-------------+
-                           |
-                    Final AI Response
+                    +-------------------+
+                    |    Client/API     |
+                    +---------+---------+
+                              |
+                              v
+                  Revenue Cycle Router
+                              |
+                              v
+                 Revenue Cycle Service
+                              |
+                              v
+            Revenue Cycle Implementation
+                              |
+        ------------------------------------------------
+        |                     |                       |
+        v                     v                       v
+  Claims Agent         Billing Agent         Validation Agent
+        |                     |                       |
+        -----------------------------------------------
+                              |
+                              v
+                   Consolidated AI Response
+                              |
+                              v
+                      JSON API Response
 ```
-
----
-
-# Technology Stack
-
-## Backend
-
-- Python
-- FastAPI
-- AutoGen 0.7.5
-- Pydantic
-- Loguru
-- AsyncIO
-
----
-
-## Frontend
-
-### React
-
-- React 19
-- TypeScript
-- Axios
-- Vite
-- React Markdown
-
-### Streamlit
-
-- Streamlit
-- Requests
-- Python
 
 ---
 
 # Project Structure
 
 ```
-Revenue_Cycle_Management_Agent
+Revenue_Cycle_Management_Agent/
 │
-├── backend
-│   └── revenue-cycle-management-agent-python-app
-│       ├── agents
-│       ├── config
-│       ├── implementation
-│       ├── models
-│       ├── routers
-│       ├── services
-│       ├── utils
-│       ├── logs
-│       └── main.py
-│
-├── ui
-│   ├── reactjs
-│   │   └── revenue-cycle-management-agent-reactjs-app
+├── app/
+│   ├── agents/
+│   │   ├── billing_agent.py
+│   │   ├── claims_agent.py
+│   │   └── validation_agent.py
 │   │
-│   └── streamlit
-│       └── revenue-cycle-management-agent-streamlit-app
+│   ├── config/
+│   │   ├── llm_config.py
+│   │   └── llm_models_config.py
+│   │
+│   ├── implementation/
+│   │   └── revenue_cycle_impl.py
+│   │
+│   ├── models/
+│   │   ├── request_model.py
+│   │   └── response_model.py
+│   │
+│   ├── routers/
+│   │   └── revenue_cycle_router.py
+│   │
+│   ├── services/
+│   │   └── revenue_cycle_service.py
+│   │
+│   ├── utils/
+│   │   ├── json_utils.py
+│   │   ├── logger.py
+│   │   └── prompt_templates.py
+│   │
+│   └── main.py
 │
+├── claim_request.json
 ├── requirements.txt
-└── README.md
+├── mlflow.db
+├── .env
+└── logs/
 ```
 
 ---
 
-# Backend Application
+# Multi-Agent Workflow
 
-## Main Components
+## 1. Claims Agent
 
-### Agents
+Responsibilities
 
-- Claims Agent
-- Validation Agent
-- Billing Agent
-
----
-
-### Router
-
-```
-POST /revenue-cycle/process-claim
-```
-
-Processes healthcare insurance claims.
+* Analyze insurance claim
+* Check claim completeness
+* Assess submission readiness
+* Identify denial risks
+* Generate claim summary
 
 ---
 
-### Service Layer
+## 2. Billing Agent
 
-Responsible for:
+Responsibilities
 
-- Agent orchestration
-- Request handling
-- AI workflow execution
-
----
-
-### Models
-
-Request Model
-
-```
-ClaimRequest
-```
-
-Response Model
-
-```
-RevenueCycleResponse
-```
+* Review procedure billing
+* Detect revenue leakage
+* Estimate reimbursement
+* Validate billing accuracy
 
 ---
 
-# React Frontend
+## 3. Validation Agent
 
-Located at
+Responsibilities
 
-```
-ui/reactjs/revenue-cycle-management-agent-reactjs-app
-```
-
-## Features
-
-- Claim submission form
-- API integration
-- Markdown AI output
-- Summary cards
-- Clean responsive UI
+* Validate insurance information
+* Verify diagnosis codes
+* Verify procedure codes
+* Check compliance
+* Detect missing information
 
 ---
 
-## Install
+# Technology Stack
+
+| Component      | Technology                 |
+| -------------- | -------------------------- |
+| Language       | Python 3.11+               |
+| API Framework  | FastAPI                    |
+| AI Framework   | AutoGen 0.7.5              |
+| LLM            | OpenAI / Compatible Models |
+| Validation     | Pydantic                   |
+| Logging        | Loguru                     |
+| Model Tracking | MLflow                     |
+| API Server     | Uvicorn                    |
+
+---
+
+# Installation
+
+## Clone Repository
 
 ```bash
-cd ui/reactjs/revenue-cycle-management-agent-reactjs-app
+git clone <repository-url>
 
-npm install
-```
-
-Run
-
-```bash
-npm run dev
-```
-
-Default URL
-
-```
-http://localhost:5173
+cd Revenue_Cycle_Management_Agent
 ```
 
 ---
 
-# Streamlit Frontend
-
-Located at
-
-```
-ui/streamlit/revenue-cycle-management-agent-streamlit-app
-```
-
-Run
+## Create Virtual Environment
 
 ```bash
-cd ui/streamlit/revenue-cycle-management-agent-streamlit-app
-
-pip install -r requirements.txt
-
-streamlit run app.py
+python -m venv .venv
 ```
-
-Default URL
-
-```
-http://localhost:8501
-```
-
----
-
-# Backend Installation
-
-Navigate to backend
-
-```bash
-cd backend/revenue-cycle-management-agent-python-app
-```
-
-Create virtual environment
-
-```bash
-python -m venv venv
-```
-
-Activate
 
 Windows
 
 ```bash
-venv\Scripts\activate
+.venv\Scripts\activate
 ```
 
 Linux/Mac
 
 ```bash
-source venv/bin/activate
+source .venv/bin/activate
 ```
 
-Install dependencies
+---
+
+## Install Dependencies
 
 ```bash
-pip install -r ../../requirements.txt
+pip install -r requirements.txt
 ```
 
-Configure environment variables
+---
 
-Create
+# Environment Variables
 
-```
-.env
-```
+Create a `.env` file.
 
 Example
 
 ```text
 OPENAI_API_KEY=your_api_key
-OPENAI_MODEL=gpt-4
+
+OPENAI_MODEL=gpt-4o
+
+BASE_URL=https://api.openai.com/v1
 ```
 
-Run FastAPI
+---
+
+# Running the Application
 
 ```bash
-uvicorn main:app --reload
+uvicorn app.main:app --reload
 ```
 
-Backend URL
+Default
 
 ```
 http://localhost:8000
@@ -359,9 +247,15 @@ Swagger UI
 http://localhost:8000/docs
 ```
 
+ReDoc
+
+```
+http://localhost:8000/redoc
+```
+
 ---
 
-# REST API
+# REST APIs
 
 ## Root
 
@@ -373,13 +267,13 @@ Returns application information.
 
 ---
 
-## Health
+## Health Check
 
 ```
 GET /health
 ```
 
-Returns backend health status.
+Returns service health.
 
 ---
 
@@ -389,6 +283,8 @@ Returns backend health status.
 GET /revenue-cycle/health
 ```
 
+Returns Revenue Cycle service status.
+
 ---
 
 ## Application Information
@@ -397,9 +293,16 @@ GET /revenue-cycle/health
 GET /revenue-cycle/info
 ```
 
+Displays
+
+* Version
+* Agents
+* Framework
+* Features
+
 ---
 
-## Process Claim
+## Process Healthcare Claim
 
 ```
 POST /revenue-cycle/process-claim
@@ -411,13 +314,41 @@ POST /revenue-cycle/process-claim
 
 ```json
 {
-  "claim_id": "CLM10001",
+  "claim_id": "CLM100001",
   "patient_id": "PAT10001",
   "patient_name": "John Doe",
-  "insurance_provider": "Blue Cross",
-  "diagnosis": "Hypertension",
-  "procedure": "Consultation",
-  "claim_amount": 250.00
+  "date_of_birth": "1988-05-15",
+  "gender": "Male",
+  "service_date": "2026-06-20",
+  "insurance": {
+    "provider_name": "Blue Cross",
+    "policy_number": "POL123456",
+    "group_number": "GRP001",
+    "member_id": "MEM78910",
+    "authorization_number": "AUTH001"
+  },
+  "provider": {
+    "provider_id": "PRV001",
+    "provider_name": "Dr. Smith",
+    "specialty": "Cardiology",
+    "facility_name": "City Hospital"
+  },
+  "diagnosis_codes": [
+    {
+      "code": "I10",
+      "description": "Essential Hypertension"
+    }
+  ],
+  "procedure_codes": [
+    {
+      "code": "93000",
+      "description": "Electrocardiogram",
+      "units": 1,
+      "charge_amount": 250.0
+    }
+  ],
+  "total_claim_amount": 250.0,
+  "notes": "Routine outpatient consultation"
 }
 ```
 
@@ -428,85 +359,156 @@ POST /revenue-cycle/process-claim
 ```json
 {
   "success": true,
-  "claim_status": "Validated",
-  "billing_status": "Approved",
-  "validation_status": "Passed",
-  "summary": "The insurance claim has been successfully validated and forwarded for billing."
+  "claim_id": "CLM100001",
+  "patient_id": "PAT10001",
+  "claim_analysis": {
+    "claim_status": "Processed",
+    "submission_ready": true,
+    "confidence_score": 0.95
+  },
+  "billing_analysis": {
+    "billing_status": "Reviewed",
+    "estimated_reimbursement": 225.0,
+    "revenue_leakage_risk": "Low"
+  },
+  "validation_analysis": {
+    "validation_status": "Validated",
+    "compliance_status": "Compliant"
+  },
+  "overall_risk_level": "Low",
+  "workflow_status": "Completed",
+  "processing_time_seconds": 1.72
 }
 ```
 
 ---
 
-# Multi-Agent Workflow
+# Processing Flow
 
 ```
-Incoming Claim
-        │
-        ▼
-Claims Processing Agent
-        │
-        ▼
-Validation Agent
-        │
-        ▼
-Billing Agent
-        │
-        ▼
-AI Generated Summary
-        │
-        ▼
-REST API Response
+Receive Claim
+      │
+      ▼
+Validate Request
+      │
+      ▼
+Claims Agent Analysis
+      │
+      ▼
+Billing Agent Review
+      │
+      ▼
+Validation Agent Review
+      │
+      ▼
+Merge Outputs
+      │
+      ▼
+Generate Recommendations
+      │
+      ▼
+Return JSON Response
 ```
 
 ---
 
 # Logging
 
-The application uses **Loguru** for centralized logging.
+The application uses **Loguru** for structured logging.
 
-Generated log files
+Generated log files include:
 
 ```
 logs/
-
 ├── revenue_cycle_management.log
 ├── healthcare.log
-└── error.log
+├── error.log
+├── medical_coding.log
+└── medical_coding_error.log
 ```
 
-Features
+Logs capture:
 
-- Rotating logs
-- Compressed archives
-- Request logging
-- Exception logging
-- API execution tracking
+* Incoming requests
+* API responses
+* Agent execution
+* Errors and exceptions
+* Processing time
+
+---
+
+# MLflow Support
+
+The project includes MLflow for experiment tracking.
+
+Example:
+
+```bash
+mlflow ui
+```
+
+Default URL
+
+```
+http://localhost:5000
+```
+
+---
+
+# Validation Performed
+
+The AI agents evaluate:
+
+* Patient demographics
+* Insurance information
+* Provider details
+* Diagnosis codes
+* Procedure codes
+* Claim amount
+* Missing information
+* Compliance issues
+* Submission readiness
+* Billing accuracy
+* Reimbursement estimate
+* Revenue leakage risk
 
 ---
 
 # Future Enhancements
 
-- HL7/FHIR integration
-- EHR interoperability
-- ICD-10 validation
-- CPT code verification
-- Fraud detection
-- Denial prediction
-- Prior authorization automation
-- Payment posting automation
-- Dashboard analytics
-- Multi-tenant deployment
-- Docker support
-- Kubernetes deployment
-- Azure OpenAI integration
-- ML-based claim approval prediction
+* ICD-10 validation
+* CPT/HCPCS verification
+* FHIR integration
+* HL7 integration
+* Electronic claim submission
+* Prior authorization automation
+* Denial prediction model
+* Revenue analytics dashboard
+* Payment posting automation
+* Explainable AI (XAI) for claim decisions
+* Batch claim processing
+* Role-based authentication
+* Docker and Kubernetes deployment
+* Cloud deployment (Azure/AWS/GCP)
+
+---
+
+# Key Highlights
+
+* Modular Router → Service → Implementation architecture
+* AutoGen 0.7.5 multi-agent orchestration
+* AI-assisted claim review and validation
+* Revenue leakage detection
+* Reimbursement estimation
+* Compliance verification
+* Structured logging with Loguru
+* FastAPI REST APIs with automatic Swagger documentation
+* Pydantic-based request validation
+* MLflow-ready project structure
+* Clean, extensible, production-oriented design
 
 ---
 
 # License
 
-This project is intended for educational and research purposes.
-
-Healthcare AI applications should comply with applicable regulations such as HIPAA, GDPR, and local healthcare data privacy standards before production deployment.
-
----
+This project is intended for educational, research, and healthcare AI automation purposes. Ensure compliance with applicable healthcare regulations (such as HIPAA or regional privacy requirements) before using it in production.

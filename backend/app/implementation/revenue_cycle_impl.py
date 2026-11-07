@@ -1,9 +1,11 @@
 import time
-from utils.logger import logger
 
-from agents.claims_agent import get_claims_agent
-from agents.billing_agent import get_billing_agent
-from agents.validation_agent import get_validation_agent
+from app.config.settings import settings
+logger = settings.get_logger()
+
+from app.agents.claims_agent import get_claims_agent
+from app.agents.billing_agent import get_billing_agent
+from app.agents.validation_agent import get_validation_agent
 
 
 class RevenueCycleImplementation:

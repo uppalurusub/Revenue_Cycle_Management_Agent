@@ -3,13 +3,12 @@ import time
 
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
-from utils.logger import logger
+from app.config.settings import settings
+logger = settings.get_logger()
 
-from routers.revenue_cycle_router import (
+from app.routers.revenue_cycle_router import (
     router as revenue_cycle_router
 )
-
-
 
 # --------------------------------------------------
 # Configure Loguru
@@ -49,18 +48,6 @@ app = FastAPI(
     version="1.0.0"
 )
 
-from fastapi.middleware.cors import CORSMiddleware
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-    ],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 # --------------------------------------------------
 # Middleware
 # --------------------------------------------------

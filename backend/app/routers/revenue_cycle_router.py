@@ -1,9 +1,10 @@
 from fastapi import APIRouter, HTTPException
-from utils.logger import logger
+from app.config.settings import settings
+logger = settings.get_logger()
 
-from services.revenue_cycle_service import RevenueCycleService
-from models.request_model import ClaimRequest
-from models.response_model import RevenueCycleResponse
+from app.services.revenue_cycle_service import RevenueCycleService
+from app.models.request_model import ClaimRequest
+from app.models.response_model import RevenueCycleResponse
 
 router = APIRouter(
     prefix="/revenue-cycle",
