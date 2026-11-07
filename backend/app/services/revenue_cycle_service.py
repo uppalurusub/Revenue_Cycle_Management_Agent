@@ -5,7 +5,7 @@ from app.implementation.revenue_cycle_impl import (
     RevenueCycleImplementation
 )
 
-from app.models.request_model import ClaimRequest
+from app.schemas.request_model import ClaimRequest
 
 import mlflow
 from datetime import datetime

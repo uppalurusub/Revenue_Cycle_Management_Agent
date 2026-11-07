@@ -3,8 +3,8 @@ from app.config.settings import settings
 logger = settings.get_logger()
 
 from app.services.revenue_cycle_service import RevenueCycleService
-from app.models.request_model import ClaimRequest
-from app.models.response_model import RevenueCycleResponse
+from app.schemas.request_model import ClaimRequest
+from app.schemas.response_model import RevenueCycleResponse
 
 router = APIRouter(
     prefix="/revenue-cycle",
